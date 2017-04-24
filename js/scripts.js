@@ -31,8 +31,8 @@ var pinchToTeaspon = function(number1) {
   return number1 * (1/12);
 };
 
-
+var convertChoice =prompt("Please select a type of conversion. Your choices are: -  ")
 
 var number1 = parseInt(prompt("Enter the number you'd like to convert: "));
 
-origin("Your conversion is: " + celciusToFar(number1) + ".");
+origin("Your conversion is: " + convertChoice(number1) + ".");
