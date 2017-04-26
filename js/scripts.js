@@ -1,3 +1,4 @@
+/*back end*/
 
 var origin = function(whatToSay) {
   alert(whatToSay);
@@ -31,8 +32,19 @@ var pinchToTeaspon = function(number1) {
   return number1 * (1/12);
 };
 
-var convertChoice =prompt("Please select a type of conversion. Your choices are: -  ")
+//var convertChoice =prompt("Please select a type of conversion. Your choices are: -  ")
 
-var number1 = parseInt(prompt("Enter the number you'd like to convert: "));
+//var number1 = parseInt(prompt("Enter the number you'd like to convert: "));
 
-origin("Your conversion is: " + convertChoice(number1) + ".");
+//origin("Your conversion is: " + convertChoice(number1) + ".");
+
+/*front end*/
+
+$(document).ready(function() {
+  $("form#celcius").submit(function() {
+    event.preventDefault();
+    var degreeInput = parseFloat($("#celciusToFar").val());
+    var result = celciusToFar(degreeInput);
+    $("#output").text(result);
+  });
+});
